@@ -1,0 +1,41 @@
+<div class="login-container">
+  <h2>Em angular bunitu</h2>
+
+  <form (ngSubmit)="onLogin()" #formLogin="ngForm">
+    <div class="form-group">
+      <label for="username">Usuário:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        required
+        [(ngModel)]="username"
+        #user="ngModel"
+      />
+      <div class="error" *ngIf="user.invalid && user.touched">
+        Campo obrigatório.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Senha:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        [(ngModel)]="password"
+        #pass="ngModel"
+      />
+      <div class="error" *ngIf="pass.invalid && pass.touched">
+        Campo obrigatório.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="formLogin.invalid">Login</button>
+
+    <div class="error" *ngIf="loginError">
+      Usuário ou senha inválidos!
+    </div>
+  </form>
+</div>

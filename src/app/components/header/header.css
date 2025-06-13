@@ -1,0 +1,42 @@
+header nav {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    width: 80vw;
+}
+
+header nav a {
+    color: #1351d8;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+header nav a:hover {
+    color: #1b357e;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+header div {
+    display: inline;
+    vertical-align: middle;
+}
+
+img{
+    
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+}
+
+header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
